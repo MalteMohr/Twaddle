@@ -63,6 +63,17 @@ public class IndexController {
         return new ModelAndView(new RedirectView(fromMappingName("user-list").build()));
     }
 
+    @GetMapping("/twaddle/posten")
+    public String addPost() {
+        return "posten";
+    }
+
+    @PostMapping("/twaddle/message")
+    public String addMessage (@RequestParam(value = "message" , required = false, defaultValue = "Keine leeren Nachrichten schreiben!") String name, Model model ){
+        model.addAttribute("message", name);
+        return "message" ;
+    }
+
     public static class UserForm {
         private String userName;
         private String passwd;
@@ -84,4 +95,6 @@ public class IndexController {
         }
     }
 }
+
+
 

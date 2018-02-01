@@ -1,24 +1,22 @@
-
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Post message</title>
     <style>
     form {     margin: 0 auto;   width: 400px;   padding: 1em;   border: 3px solid #CCC;   border-radius: 1em;   border-color: White; }  form div + div {   margin-top: 1em; }  label {    display: inline-block;   width: 90px;   text-align: right; color: white}  input, textarea {    font: 1em sans-serif;     width: 300px;   box-sizing: border-box;     border: 3px solid #999; }  input:focus, textarea:focus {    border-color: Darkred; }  textarea {    vertical-align: top;     height: 5em; }  .button {    padding-left: 90px; }  button { border: 3px solid #999;     margin-left: .5em; }
     </style>
 </head>
-<body style="background-image:url(http://eskipaper.com/images/background-images-11.jpg)" >
+<body style="background-image:url(http://hintergrundbild.org/wallpaper/full/5/8/e/7524-blue-wallpapers-1920x1080-fuer-mac.jpg)">
+<main>
+    <form method="post" action="/twaddle/user/login">
+        <label for="Message to">Message to: </label>
+        <input type="text" name="Message to" id="Message to"></input>
+        <label for="Message">Message: </label>
+        <input type="text" name="Message" id="Message"></input>
+        <button type="submit">Post</button>
 
-<dd>
-<font color="white" size="6">
-<dt>User name:</dt>
-<dl th:text="${name}" style="color=white"></dl>
-</font>
-</dd>
-
-<font color="white" size="5">
-<a href="/twaddle">Home</a>
-</font>
+    </form>
+</main>
 </body>
 </html>
